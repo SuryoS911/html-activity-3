@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Html Activity 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         #main{
+            font-family: "Montserrat", sans-serif;
             width: 800px;
             margin: auto;
             margin-top: 20px;
         }
-        table{
+        #tbl{
             width: 100%;
             border-collapse: collapse;
         }
@@ -22,7 +26,7 @@
         }
         td {
             border: 1px solid;
-            padding: 8px;
+            padding: 5px;
             text-align: left;
         }
         #miAyam {
@@ -45,40 +49,20 @@
             width: 70px;
             height: auto;
         }
-        #tombol {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            width: 13%;
-            height: 30px;
-            border-color: rgb(114, 114, 114);
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0px 3px 0px rgb(34, 34, 34);
-            filter: drop-shadow(0px 3px 2px black);
-            transition-duration: 0.5s;
-        }
-        #tombol:active {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            width: 13%;
-            height: 30px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0px 0px 0px rgb(34, 34, 34);
-            filter: drop-shadow(0px 0px 0px black);
-            position: relative;
-            top: 3px;
-            transition-duration: 0.5s;
-        }
-        #tombol:hover {
-            cursor: pointer;
-            background-color: rgb(223, 223, 223);
-            transition-duration: 0.5s;
-        }
         #main h1 {
             user-select: none;
             font-size: 50px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             color: white;
             filter: drop-shadow(2px 2px 0px black);
+        }
+        #tombol {
+            margin-bottom: 30px;
+            width: 100px;
+            height: 30px;
+        }
+        #tombol:hover {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -87,7 +71,7 @@
         <h1>Menu Makanan</h1>
 
         <button id="tombol">Tambah</button>
-        <table>
+        <table id="tbl">
             <thead>
                 <tr>
                     <th>No</th>
