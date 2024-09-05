@@ -26,12 +26,14 @@
             border-radius: 10px 80px;
             padding: 15px;
         }
-        .name, .code, .msk, .expi, .beli, .jual, .tombol {
+        .name, .code, .msk, .expi, .beli, .jual, .stck {
+            display: flex;
+            flex-direction: column;
             margin-left: 150px;
             margin-bottom: 20px;
             margin-top: 20px;
         }
-        #nama, #kode, #tglMasuk, #tglExpired, #hargaBeli, #hargaJual {
+        #nama, #kode, #tglMasuk, #tglExpired, #hargaBeli, #hargaJual, #stock {
             margin-top: 10px;
             width: 60%;
             height: 30px;
@@ -68,42 +70,57 @@
         }
         .tombol {
             position: relative;
-            left: 18%;
+            left: 46%;
         }
     </style>
 </head>
+<script>
+    function reset(){
+      document.getElementById("nama").value = ''
+      document.getElementById("kode").value = ''
+      document.getElementById("tglMasuk").value = ''
+      document.getElementById("tglExpired").value = ''
+      document.getElementById("stock").value = ''
+      document.getElementById("hargaBeli").value = ''
+      document.getElementById("hargaJual").value = ''
+    }
+</script>
 <body>
     <div class="container">
         <h1>Tambah Barang</h1>
 
         <div class="inpt">
             <div class="name">
-                <label>Nama</label><br>
+                <label>Nama</label>
                 <input type="text" id="nama">
             </div>
             <div class="code">
-                <label>Kode</label><br>
+                <label>Kode</label>
                 <input type="text" id="kode" maxlength="12">
             </div>
             <div class="msk">
-                <label>Tanggal Masuk</label><br>
+                <label>Tanggal Masuk</label>
                 <input type="date" id="tglMasuk">
             </div>
             <div class="expi">
-                <label>Tanggal Expired</label><br>
+                <label>Tanggal Expired</label>
                 <input type="date" id="tglExpired">
             </div>
+            <div class="stck">
+                <label>Jumlah Stock</label>
+                <input type="number" id="stock">
+            </div>
             <div class="beli">
-                <label>Harga Beli</label><br>
+                <label>Harga Beli</label>
                 <input type="number" id="hargaBeli">
             </div>
             <div class="jual">
-                <label>Harga Jual</label><br>
+                <label>Harga Jual</label>
                 <input type="number" id="hargaJual">
             </div>
             <div class="tombol">
                 <input type="submit" id="confirm" value="Confirm">
-                <input type="reset" id="rst">
+                <input type="reset" id="rst" onclick="reset()">
             </div>
         </div>
     </div>
