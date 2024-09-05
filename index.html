@@ -3,178 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html Activity 3</title>
+    <title>Add Items</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-        #main{
+        .container{
             font-family: "Montserrat", sans-serif;
-            width: 1200px;
+            width: 30%;
             margin: auto;
-            margin-top: 20px;
+            margin-top: 50px;
         }
-        #tbl{
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-        }
-        th {
-            border: 1px solid;
-            padding: 5px;
-            text-align: center;
-            background-color: rgb(183, 183, 183);
-        }
-        td {
-            border: 1px solid;
-            padding: 5px;
-            text-align: center;
-        }
-        #miAyam {
-            width: 70px;
-            height: auto;
-        }
-        #bakso {
-            width: 70px;
-            height: auto;
-        }
-        #pecelele {
-            width: 70px;
-            height: auto;
-        }
-        #keong {
-            width: 70px;
-            height: auto;
-        }
-        #ayamgoyeng {
-            width: 70px;
-            height: auto;
-        }
-        #main h1 {
+        .container h1 {
             user-select: none;
             font-size: 50px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             color: white;
             filter: drop-shadow(2px 2px 0px black);
         }
-        #tombol {
-            text-decoration: none;
+        .inpt {
+            border: 2px solid black;
+            border-radius: 10px 80px;
+            padding: 15px;
+        }
+        .name, .code, .msk, .expi, .beli, .jual, .stck {
+            display: flex;
+            flex-direction: column;
+            margin-left: 150px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        #nama, #kode, #tglMasuk, #tglExpired, #hargaBeli, #hargaJual, #stock {
+            margin-top: 10px;
+            width: 60%;
+            height: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #confirm {
+            background-color: rgb(0, 115, 255);
             color: white;
-            background-color: #b6b6b6;
-            border: 1px solid rgb(67, 67, 67);
-            border-radius: 15px;
-            padding: 7px;
+            border-radius: 10px;
+            width: 70px;
+            height: 30px;
         }
-        #tombol:hover {
-            background-color: #ababab;
-        }
-        #tombol:active {
-            background-color: #848484;
-        }
-        td #dlt:hover{
+        #confirm:hover {
             cursor: pointer;
-            color: white;
+            background-color: rgb(0, 81, 179);
+        }
+        #confirm:active {
+            background-color: rgb(0, 54, 120);
+        }
+        #rst {
             background-color: rgb(255, 0, 0);
-        }
-        td #edt:hover{
-            cursor: pointer;
             color: white;
-            background-color: rgb(0, 89, 255);
+            border-radius: 10px;
+            width: 70px;
+            height: 30px;
+        }
+        #rst:hover {
+            cursor: pointer;
+            background-color: rgb(210, 0, 0);
+        }
+        #rst:active {
+            background-color: rgb(142, 0, 0);
+        }
+        .tombol {
+            position: relative;
+            left: 46%;
         }
     </style>
-</head>v 
+</head>
+<script>
+    function reset(){
+      document.getElementById("nama").value = ''
+      document.getElementById("kode").value = ''
+      document.getElementById("tglMasuk").value = ''
+      document.getElementById("tglExpired").value = ''
+      document.getElementById("stock").value = ''
+      document.getElementById("hargaBeli").value = ''
+      document.getElementById("hargaJual").value = ''
+    }
+</script>
 <body>
-    <div id="main">
-        <h1>Daftar Produk</h1>
+    <div class="container">
+        <h1>Tambah Barang</h1>
 
-        <a href="addItem.html" id="tombol" target="blank">Tambah</a>
-        <table id="tbl">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Nama Barang</th>
-                    <th>Kode Barang</th>
-                    <th>Tanggal Masuk</th>
-                    <th>Tanggal Expired</th>
-                    <th>Jumlah Stock</th>
-                    <th>Harga Beli</th>
-                    <th>Harga Jual</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td width="70px">1</td>
-                    <td>Masker Medis</td>
-                    <td>Z4MDF3I9HQ4N</td>
-                    <td>04-09-2024</td>
-                    <td>04-09-2030</td>
-                    <td>20</td>
-                    <td>10.000</td>
-                    <td>12.000</td>
-                    <td>
-                        <button id="edt">Edit</button>
-                        <button id="dlt">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="70px">2</td>
-                    <td>Masker Medis</td>
-                    <td>IO4O8639RN34</td>
-                    <td>04-09-2024</td>
-                    <td>04-09-2030</td>
-                    <td>20</td>
-                    <td>10.000</td>
-                    <td>12.000</td>
-                    <td>
-                        <button id="edt">Edit</button>
-                        <button id="dlt">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="70px">3</td>
-                    <td>Masker Medis</td>
-                    <td>139R0EEIW0GG</td>
-                    <td>04-09-2024</td>
-                    <td>04-09-2030</td>
-                    <td>20</td>
-                    <td>10.000</td>
-                    <td>12.000</td>
-                    <td>
-                        <button id="edt">Edit</button>
-                        <button id="dlt">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="70px">4</td>
-                    <td>Masker Medis</td>
-                    <td>3E0DUMT78ESL</td>
-                    <td>04-09-2024</td>
-                    <td>04-09-2030</td>
-                    <td>20</td>
-                    <td>10.000</td>
-                    <td>12.000</td>
-                    <td>
-                        <button id="edt">Edit</button>
-                        <button id="dlt">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="70px">5</td>
-                    <td>Masker Medis</td>
-                    <td>4FSQ2ER0O0GG</td>
-                    <td>04-09-2024</td>
-                    <td>04-09-2030</td>
-                    <td>20</td>
-                    <td>10.000</td>
-                    <td>12.000</td>
-                    <td>
-                        <button id="edt">Edit</button>
-                        <button id="dlt">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="inpt">
+            <div class="name">
+                <label>Nama</label>
+                <input type="text" id="nama">
+            </div>
+            <div class="code">
+                <label>Kode</label>
+                <input type="text" id="kode" maxlength="12">
+            </div>
+            <div class="msk">
+                <label>Tanggal Masuk</label>
+                <input type="date" id="tglMasuk">
+            </div>
+            <div class="expi">
+                <label>Tanggal Expired</label>
+                <input type="date" id="tglExpired">
+            </div>
+            <div class="stck">
+                <label>Jumlah Stock</label>
+                <input type="number" id="stock">
+            </div>
+            <div class="beli">
+                <label>Harga Beli</label>
+                <input type="number" id="hargaBeli">
+            </div>
+            <div class="jual">
+                <label>Harga Jual</label>
+                <input type="number" id="hargaJual">
+            </div>
+            <div class="tombol">
+                <input type="submit" id="confirm" value="Confirm">
+                <input type="reset" id="rst" onclick="reset()">
+            </div>
+        </div>
     </div>
 </body>
 </html>
