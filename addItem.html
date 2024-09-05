@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        .container{
+            font-family: "Montserrat", sans-serif;
+            width: 30%;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .container h1 {
+            user-select: none;
+            font-size: 50px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+            filter: drop-shadow(2px 2px 0px black);
+        }
+        .inpt {
+            border: 2px solid black;
+            border-radius: 10px 80px;
+            padding: 15px;
+        }
+        .name, .code, .msk, .expi, .beli, .jual, .tombol {
+            margin-left: 150px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        #nama, #kode, #tglMasuk, #tglExpired, #hargaBeli, #hargaJual {
+            margin-top: 10px;
+            width: 60%;
+            height: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #confirm {
+            background-color: rgb(0, 115, 255);
+            color: white;
+            border-radius: 10px;
+            width: 70px;
+            height: 30px;
+        }
+        #confirm:hover {
+            cursor: pointer;
+            background-color: rgb(0, 81, 179);
+        }
+        #confirm:active {
+            background-color: rgb(0, 54, 120);
+        }
+        #rst {
+            background-color: rgb(255, 0, 0);
+            color: white;
+            border-radius: 10px;
+            width: 70px;
+            height: 30px;
+        }
+        #rst:hover {
+            cursor: pointer;
+            background-color: rgb(210, 0, 0);
+        }
+        #rst:active {
+            background-color: rgb(142, 0, 0);
+        }
+        .tombol {
+            position: relative;
+            left: 18%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tambah Barang</h1>
+
+        <div class="inpt">
+            <div class="name">
+                <label>Nama</label><br>
+                <input type="text" id="nama">
+            </div>
+            <div class="code">
+                <label>Kode</label><br>
+                <input type="text" id="kode" maxlength="12">
+            </div>
+            <div class="msk">
+                <label>Tanggal Masuk</label><br>
+                <input type="date" id="tglMasuk">
+            </div>
+            <div class="expi">
+                <label>Tanggal Expired</label><br>
+                <input type="date" id="tglExpired">
+            </div>
+            <div class="beli">
+                <label>Harga Beli</label><br>
+                <input type="number" id="hargaBeli">
+            </div>
+            <div class="jual">
+                <label>Harga Jual</label><br>
+                <input type="number" id="hargaJual">
+            </div>
+            <div class="tombol">
+                <input type="submit" id="confirm" value="Confirm">
+                <input type="reset" id="rst">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
